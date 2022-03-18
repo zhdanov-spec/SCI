@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF2FE5F7-60BA-4A24-BC32-8328B52FFF79}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ZPSoft.GameZone.SGZAdmin</RootNamespace>
+    <AssemblyName>SGZAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Globals, Version=2.0.2708.29436, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\GameZone\Globals\bin\Debug\Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="SGZDomain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SGZDomain\SGZDomain\bin\Debug\SGZDomain.dll</HintPath>
+    </Reference>
+    <Reference Include="SGZForms">
+      <HintPath>..\..\SGZForms\SGZForms\bin\Debug\SGZForms.dll</HintPath>
+    </Reference>
+    <Reference Include="SGZGlobals">
+      <HintPath>..\..\SGZGlobals\SGZGlobals\bin\Debug\SGZGlobals.dll</HintPath>
+    </Reference>
+    <Reference Include="SGZServiceInterfaces">
+      <HintPath>..\..\SGZServiceInterfaces\SGZServiceInterfaces\bin\Debug\SGZServiceInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="SGZServiceInterfacesImpl">
+      <HintPath>..\..\SGZServiceInterfacesImpl\SGZServiceInterfacesImpl\bin\Debug\SGZServiceInterfacesImpl.dll</HintPath>
+    </Reference>
+    <Reference Include="SGZWCFInterfaces">
+      <HintPath>..\..\SGZWCFInterfaces\SGZWCFInterfaces\bin\Debug\SGZWCFInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2019.2.508.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2019.2.508.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.Themes.MaterialTeal, Version=2019.2.508.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2019.2.508.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2019.2.508.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\GlobalVariable.cs" />
+    <Compile Include="Classes\InfoGridStyle.cs" />
+    <Compile Include="Classes\InitDataBase.cs" />
+    <Compile Include="Classes\PingThreadClass.cs" />
+    <Compile Include="Classes\ServiceManager.cs" />
+    <Compile Include="Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProgramForms\BonusesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\BonusesForm.Designer.cs">
+      <DependentUpon>BonusesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\BonusScaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\BonusScaleForm.Designer.cs">
+      <DependentUpon>BonusScaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\CashDeskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\CashDeskForm.Designer.cs">
+      <DependentUpon>CashDeskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\CashierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\CashierForm.Designer.cs">
+      <DependentUpon>CashierForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\CashierGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\CashierGroupForm.Designer.cs">
+      <DependentUpon>CashierGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\DaysOfWeekForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\DaysOfWeekForm.Designer.cs">
+      <DependentUpon>DaysOfWeekForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\DeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\DeviceForm.Designer.cs">
+      <DependentUpon>DeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\DeviceTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\DeviceTypeForm.Designer.cs">
+      <DependentUpon>DeviceTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\DiscountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\DiscountForm.Designer.cs">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\DiscountScaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\DiscountScaleForm.Designer.cs">
+      <DependentUpon>DiscountScaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\GlobalsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\GlobalsForm.Designer.cs">
+      <DependentUpon>GlobalsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\GroupDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\GroupDeviceForm.Designer.cs">
+      <DependentUpon>GroupDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\GroupUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\GroupUserForm.Designer.cs">
+      <DependentUpon>GroupUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\HolidayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\HolidayForm.Designer.cs">
+      <DependentUpon>HolidayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\NodePointDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\NodePointDeviceForm.Designer.cs">
+      <DependentUpon>NodePointDeviceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\NodePointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\NodePointForm.Designer.cs">
+      <DependentUpon>NodePointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\PeriodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\PeriodForm.Designer.cs">
+      <DependentUpon>PeriodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\TariffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\TariffForm.Designer.cs">
+      <DependentUpon>TariffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramForms\TariffScaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForms\TariffScaleForm.Designer.cs">
+      <DependentUpon>TariffScaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\BonusesForm.resx">
+      <DependentUpon>BonusesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\BonusScaleForm.resx">
+      <DependentUpon>BonusScaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\CashDeskForm.resx">
+      <DependentUpon>CashDeskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\CashierForm.resx">
+      <DependentUpon>CashierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\CashierGroupForm.resx">
+      <DependentUpon>CashierGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\DaysOfWeekForm.resx">
+      <DependentUpon>DaysOfWeekForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\DeviceForm.resx">
+      <DependentUpon>DeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\DeviceTypeForm.resx">
+      <DependentUpon>DeviceTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\DiscountForm.resx">
+      <DependentUpon>DiscountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\DiscountScaleForm.resx">
+      <DependentUpon>DiscountScaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\GlobalsForm.resx">
+      <DependentUpon>GlobalsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\GroupDeviceForm.resx">
+      <DependentUpon>GroupDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\GroupUserForm.resx">
+      <DependentUpon>GroupUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\HolidayForm.resx">
+      <DependentUpon>HolidayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\NodePointDeviceForm.resx">
+      <DependentUpon>NodePointDeviceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\NodePointForm.resx">
+      <DependentUpon>NodePointForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\PeriodForm.resx">
+      <DependentUpon>PeriodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\TariffForm.resx">
+      <DependentUpon>TariffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForms\TariffScaleForm.resx">
+      <DependentUpon>TariffScaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\plus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\server.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\client2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notwork.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
