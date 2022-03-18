@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ServerDataSet" targetNamespace="http://tempuri.org/ServerDataSet.xsd" xmlns:mstns="http://tempuri.org/ServerDataSet.xsd" xmlns="http://tempuri.org/ServerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GetonSimpleConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GetonSimpleConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ZPSoft.GameZone.SCI.Properties.Settings.GlobalReference.Default.GetonSimpleConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ServerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ServerDataSet" msprop:Generator_UserDSName="ServerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Globals" msprop:Generator_TableClassName="GlobalsDataTable" msprop:Generator_TableVarName="tableGlobals" msprop:Generator_RowChangedName="GlobalsRowChanged" msprop:Generator_TablePropName="Globals" msprop:Generator_RowDeletingName="GlobalsRowDeleting" msprop:Generator_RowChangingName="GlobalsRowChanging" msprop:Generator_RowEvHandlerName="GlobalsRowChangeEventHandler" msprop:Generator_RowDeletedName="GlobalsRowDeleted" msprop:Generator_RowClassName="GlobalsRow" msprop:Generator_UserTableName="Globals" msprop:Generator_RowEvArgName="GlobalsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GlobalsValue" msprop:Generator_ColumnVarNameInTable="columnGlobalsValue" msprop:Generator_ColumnPropNameInRow="GlobalsValue" msprop:Generator_ColumnPropNameInTable="GlobalsValueColumn" msprop:Generator_UserColumnName="GlobalsValue" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GlobalsKey" msprop:Generator_ColumnVarNameInTable="columnGlobalsKey" msprop:Generator_ColumnPropNameInRow="GlobalsKey" msprop:Generator_ColumnPropNameInTable="GlobalsKeyColumn" msprop:Generator_UserColumnName="GlobalsKey">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Sarea" msprop:Generator_TableClassName="SareaDataTable" msprop:Generator_TableVarName="tableSarea" msprop:Generator_TablePropName="Sarea" msprop:Generator_RowDeletingName="SareaRowDeleting" msprop:Generator_RowChangingName="SareaRowChanging" msprop:Generator_RowEvHandlerName="SareaRowChangeEventHandler" msprop:Generator_RowDeletedName="SareaRowDeleted" msprop:Generator_UserTableName="Sarea" msprop:Generator_RowChangedName="SareaRowChanged" msprop:Generator_RowEvArgName="SareaRowChangeEvent" msprop:Generator_RowClassName="SareaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SareaId" msprop:Generator_ColumnVarNameInTable="columnSareaId" msprop:Generator_ColumnPropNameInRow="SareaId" msprop:Generator_ColumnPropNameInTable="SareaIdColumn" msprop:Generator_UserColumnName="SareaId" type="xs:int" />
+              <xs:element name="SareaName" msprop:Generator_ColumnVarNameInTable="columnSareaName" msprop:Generator_ColumnPropNameInRow="SareaName" msprop:Generator_ColumnPropNameInTable="SareaNameColumn" msprop:Generator_UserColumnName="SareaName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdCity" msprop:Generator_ColumnVarNameInTable="columnIdCity" msprop:Generator_ColumnPropNameInRow="IdCity" msprop:Generator_ColumnPropNameInTable="IdCityColumn" msprop:Generator_UserColumnName="IdCity" type="xs:int" minOccurs="0" />
+              <xs:element name="Visible" msprop:Generator_ColumnVarNameInTable="columnVisible" msprop:Generator_ColumnPropNameInRow="Visible" msprop:Generator_ColumnPropNameInTable="VisibleColumn" msprop:Generator_UserColumnName="Visible" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Globals" />
+      <xs:field xpath="mstns:GlobalsKey" />
+    </xs:unique>
+    <xs:unique name="Sarea_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Sarea" />
+      <xs:field xpath="mstns:SareaId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
